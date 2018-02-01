@@ -1,0 +1,206 @@
+html, body {
+	height: 100%;
+	font-family: 'Roboto Slab', serif;
+	font-size: 100%;
+	color: white;
+
+
+
+	overflow-x: hidden !important;
+	margin: auto !important;
+
+}
+
+section {
+    /*padding-top: 100px;*/
+    margin-bottom: 325px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px black solid;
+    font: 12px sans-serif;
+}
+
+td {
+    border: 1px black solid;
+    padding: 5px;
+}
+
+ button{
+	/*border: 1px solid black;*/
+	cursor: pointer;
+	width: 10.5em;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.row {
+
+}
+
+.backpano {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	overflow: hidden;
+}
+
+
+.title{
+	height: 100%;
+	width: 100%;	
+	/*border: 1px solid black;*/
+}
+
+.title h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	vertical-align: middle;
+	margin-top: 40px;
+	color: black;
+}
+
+.title line {
+	/*border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: black;*/
+    /*margin: 0;*/
+    /*padding-bottom: 16px;*/
+    /*margin-bottom: 40px;*/
+    /*width: 200px;*/
+    /*text-align: center;*/
+    /*margin: 0;*/
+}
+
+/*HEADER Section*/
+#header {
+	margin-bottom: 250px;
+}
+#header .row {
+	padding-top: 100px;
+}
+
+/*NAV Section*/
+#nav ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+#nav li {
+    display: inline;
+}
+
+#nav a { 
+	color: inherit; 
+} 
+
+
+
+/*VISUALIZAION Section*/
+#visualization {
+	margin-bottom: 250px;
+}
+#visualization hr {
+	margin-top: 0;
+}
+#visualization .tableau {
+	width: 100%;
+	/*padding: 80px;*/
+}
+
+#visualization .tableauPlaceholder {
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+/*RATIONALE REPORT*/
+#report hr {
+	margin-top: 0;
+}
+
+.text h1 {
+	padding-bottom: 15px;
+}
+
+#report .panel {
+	margin: 40px 80px;
+	/*text-indent:2em;*/
+	text-align:justify;
+}
+
+#report .panel-body {
+	/*color: grey;*/
+	/*text-align:justify;*/
+	/*text-indent:2em;*/
+}
+
+/*DATA Section*/
+#data hr{
+	margin-top: 0;
+}
+
+#data .panel {
+	margin: 30px 65px;
+}
+
+#dataTable table{
+	background-color: #337ab7;
+}
+
+/* ASSIGNMENT Section*/
+#assignment {
+	margin-bottom: 150px;
+}
+#assignment hr{
+	margin-top: 0;
+}
+
+#assignment .panel {
+	margin: 30px 65px;
+}
+
+#assignment button {
+	margin-top: 75px;
+}
+
+#assignment a { 
+	color: black; 
+} 
+
+
+
+/* Makes contact font bigger for phones Iphone 5 and larger */
+@media (min-width: 320px) { 
+
+}
+
+/* Smartphones in Landscape mode */
+@media only screen 
+	and (min-width : 414px) 
+	and (max-width : 736px) 
+	and (orientation : landscape) {
+
+   	}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	body{font-size: 20px;}
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	
+}

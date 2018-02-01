@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="description" content="Tableau Data Analysis">
+		<meta name="author" content="Nick Chinn">
+		<link rel="shortcut icon" href="img/ico/favicon.ico">
+		<title>Chinndustries - Tableau Antibiotic Data Analysis</title>
+
+    <!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+    <!-- Stylesheets -->
+		<link href="css/normalize.css" rel="stylesheet" >
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    
+
+    
+
+   </head>
+
+  <body>
+
+      	<!-- Background Image
+         ========================================================================= --> 
+        
+        <div class="backpano">
+        	<img src="img/paper.jpg" class="img-responsive" alt="Bow River" style="width:100%;height:100%;">
+       	</div>
+
+        <section id="header">
+          <div class="container-fluid">
+          	<div class="row " style="">
+          		<div class="col-xs-12 text-center title" style="">
+                <div style="margin-left:150px;margin-right:150px;padding-bottom:20px;border: 1px solid black;">
+                   <h1>Antibiotics Data Analysis with Tableau</h1>
+                   <h2>SI 649 Individual Assignment</h2>
+                   <h3>Nikolaus Chinn - nwchinn</h3>
+                </div>
+          		</div>
+          	</div>
+          </div>     
+        </section>
+
+        <section id="nav">
+          <div class="container-fluid" style="">
+            <div class="row" style="">
+              <div class="col-xs-12 text-center" >
+                <ul style="">
+                  <li>
+                    <a href="#visualization"><button style="">Visualization</button></a>
+                  </li>
+                  <li>
+                    <a href="#report"><button style="">Rationale Report</button></a>
+                  </li>
+                  <li>
+                    <a href="#data"><button style="">Data</button></a>
+                  </li>
+                  <li>
+                    <a href="#assignment"><button style="">Assignment</button></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section id="visualization">
+          <div class="container-fluid " style="">
+            <div class="row">
+              <div class="col-xs-12 text-center title" style="">
+                <hr>
+                <h1>Visualization</h1>
+                <hr style="margin-left: 35%; margin-right: 35%">
+                <h3>View on <a href="https://public.tableau.com/profile/nikchinn#!/vizhome/Antibiotic_Data_Analysis/IndividualAssignmentDashboard">Tableau Public</h3></a>
+                <p class="line" style="">&nbsp;</p>
+              </div>
+
+              <div class="col-xs-12 tableau" style="">
+
+                <div class='tableauPlaceholder' id='viz1517501888522' style='margin-left: auto; margin-right: auto;'>
+                  <noscript><a href='#'>
+                    <img alt='Individual Assignment Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;Antibiotic_Data_Analysis&#47;IndividualAssignmentDashboard&#47;1_rss.png' style='border: none' /></a>
+                  </noscript>
+                  <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='views&#47;Antibiotic_Data_Analysis&#47;IndividualAssignmentDashboard?:embed=y&amp;:display_count=y&amp;publish=yes' /> 
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;Antibiotic_Data_Analysis&#47;IndividualAssignmentDashboard&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='filter' value='publish=yes' />
+                  </object>
+                </div>                
+                <script type='text/javascript'>                    
+                  var divElement = document.getElementById('viz1517501888522');                    
+                  var vizElement = divElement.getElementsByTagName('object')[0];                   
+                  vizElement.style.width='1000px';vizElement.style.height='827px';                    
+                  var scriptElement = document.createElement('script');                    
+                  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                  vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                </script>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section id="report">
+          <div class="container-fluid ">
+            <div class="row">
+              <div class="col-xs-12 text-center title" style="">
+                <hr>
+                <h1>Rationale Report</h1>
+                <hr style="margin-left: 35%; margin-right: 35%">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" style="font-weight: bold;">Communication Goals</div>
+                    <div class="panel-body" style="">
+                       <span style="color: grey;">Upon initially looking over the data, I decided that I wanted to highlight the anti-bacterial effectiveness of each of the three antibiotics: Penicillin, Streptomycin, and Neomycin, especially in regard to the Gram-positive and Gram-negative groups of bacteria. Initially, I had the idea of plotting the minimum inhibitory concentration(MIC) values of the three antibiotics against each of the given bacterial infections into a stacked bar graph with circles as marks. The MIC value represents the necessary concentration of antibiotic required to prevent in vitro growth of the different bacterial strains. This means that the closer the MIC value is to zero, the more effective it is. Due to the large range of MIC values for the three antibiotics, there was a concentration of overlapping circles at the bottom of the graph with a few outliers near the top. To combat these obvoluted marks near 1 MIC unit, I decided to change the scale to a logarithmic one. This fixed the issue and gave me a more robust view of the data set. To get a better view of the effects of Gram-positive versus Gram-negative bacteria, I split the columns of bacteria names into two groups with Gram-Positive bacterial infections in one and Gram-negative in the other. This allowed me to easily see the most effective antibiotic for each strain of bacteria, but I felt that it still didn’t give a clear view regarding the effectiveness of each of the three antibiotics.
+                       <br><br>
+                       In turn, I created Chart 2 to more closely examine the relationship between the three antibiotics and the Gram-positive/Gram-negative bacterial groups by separating the stacked chart into separate rows for each of the three antibiotics. I found this to be much more effective at expressing which antibiotic had the strongest antibacterial effect against the Gram-positive group and the Gram-negative group. As evident from the visualization, Penicillin was extremely effective against Gram-positive but extremely ineffective against a majority of the Gram-negative strains. Streptomycin had similar MIC levels for both Gram-positive and Gram-negative strains, although for the Gram-positive bacteria, Streptomycin had a much higher standard deviation of MIC values and contained both the minimum and maximum Streptomycin MIC values, (0.01, 14). Neomycin showed around an average MIC level of 1 for Gram-negative strains but had very varied results on Gram-positive strains. It had values as low as 0.001 for two bacteria but also values as high as 10 and 40 for other Gram-positive bacteria. Due to the use of a logarithmic scale from 0.001 to 1,000, I believe the true differences between various MIC, especially the outliers on both ends, might be downplayed although I do believe Chart 1 gives a better look into the true differences between each antibiotics effect on the 16 bacterial strains.</span>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading" style="font-weight: bold;">Design Rationale</div>
+                    <div class="panel-body" style="">
+                      <span style="color: grey;">
+                        For my initial examination of the data, Chart 1, I used a stacked bar plot with rings as the mark. I chose this because it allowed me to see all three antibiotics compared against one another for each of the 16 bacterial infections. The design has a logarithmic scale centered on 1 MIC unit, with 0 at the very bottom and 1,000 at the top of the graph, since it would otherwise be impossible to discern between the various MIC values near 1. I chose to use rings since they stood out more than dashes were easier to spot visually with my color scheme. For my color encoding, I used the three antibiotics with their MIC level for the key. Originally it had blue, orange, and red as the color encodings but the given color scheme was too perceptually uniform, and I decided to go with green, yellow, and red instead since it caused more pop-out between the circles. I also added a reference line at 1 MIC unit to highlight the fact it’s a logarithmic scale centered on 1 and show which values very clearly fall under 1. 
+                       <br><br>
+                        Since the focus of Chart 2 was to highlight the differences in effect between the three strains, I decided to use a bar plot with bars as my mark for Chart 2. I tried using circles and dashes originally, but it came off with the impression that our data was centered around 0 instead of 1 unit. I found that bars made it easier to discern that the very bottom of the graph started at 0, as well as, made it easier to see the most effective antibiotic for each strain. In regards to the color encodings, I used maize and blue to represent the separate Gram-positive and Gram-negative bacterial infection groups, respectively. This helps force the viewer to focus on the differences each of three antibiotics have on the two Gram-strain groups. I added a reference line at 1 MIC unit on these graphs as well, since it helps the viewer recognize the logarithmic scale and it makes it easier to judge values based off that line. I labeled the bars with their MIC values to make it easier to read if the whole visualization was scaled down or squashed if used on another website. Overall, I feel my visualization used effective encoding and marks to clearly indicate each of the antibiotics effects upon Gram-positive and Gram-negative bacterial infections.
+                      </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="data">
+          <div class="container-fluid ">
+            <div class="row">
+              <div class="col-xs-12 text-center title" style="">
+                <hr>
+                <h1>Dataset Information</h1>
+                <hr style="margin-left: 35%; margin-right: 35%">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 text-center" style="">
+                <!-- <h1>Data Set: Antibiotics</h1>
+                <hr style="margin-left: 35%; margin-right: 35%"> -->
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="font-weight: bold;">Data Set: Antibiotics</div>
+                    <div class="panel-body" style="">
+                      <span style="color: grey;">
+                      After the World War II, antibiotics were considered as "wonder drugs", since they were easy remedy for what had been intractable ailments. To learn which drug worked most effectively for which bacterial infection, performance of the three most popular antibiotics on 16 bacteria were gathered.
+                      <br><br>
+                      The values in the table below represent the minimum inhibitory concentration (MIC), a measure of the effectiveness of the antibiotic, which represents the concentration of antibiotic required to prevent growth in vitro. The reaction of the bacteria to Gram staining is described by the covariate “gram staining”. Bacteria that are stained dark blue or violet are Gram-positive. Otherwise, they are Gram-negative.
+                    </span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid ">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <div id="dataTable" class="row">
+                  <table style="margin-left: auto;margin-right: auto">
+                    <tr style="font-weight: bold"><td>Bacteria</td><td>Penicilin</td><td>Streptomycin</td><td>Neomycin</td><td>Gram Staining </td></tr>
+                    <tr><td>Aerobacter aerogenes</td><td>870</td><td>1</td><td>1.6</td><td>negative</td></tr>
+                    <tr><td>Brucella abortus</td><td>1</td><td>2</td><td>0.02</td><td>negative</td></tr>
+                    <tr><td>Brucella anthracis</td><td>0.001</td><td>0.01</td><td>0.007</td><td>positive</td></tr>
+                    <tr><td>Diplococcus pneumoniae</td><td>0.005</td><td>11</td><td>10</td><td>positive</td></tr>
+                    <tr><td>Escherichia coli</td><td>100</td><td>0.4</td><td>0.1</td><td>negative</td></tr>
+                    <tr><td>Klebsiella pneumoniae</td><td>850</td><td>1.2</td><td>1</td><td>negative</td></tr>
+                    <tr><td>Mycobacterium tuberculosis</td><td>800</td><td>5</td><td>2</td><td>negative</td></tr>
+                    <tr><td>Proteus vulgaris</td><td>3</td><td>0.1</td><td>0.1</td><td>negative</td></tr>
+                    <tr><td>Pseudomonas aeruginosa </td><td>850</td><td>2</td><td>0.4</td><td>negative</td></tr>
+                    <tr><td>Salmonella (Eberthella) typhosa </td><td>1</td><td>0.4</td><td>0.008</td><td>negative</td></tr>
+                    <tr><td>Salmonella schottmuelleri </td><td>10</td><td>0.8</td><td>0.09</td><td>negative</td></tr>
+                    <tr><td>Staphylococcus albus </td><td>0.007</td><td>0.1</td><td>0.001</td><td>positive</td></tr>
+                    <tr><td>Staphylococcus aureus </td><td>0.03</td><td>0.03</td><td>0.001</td><td>positive</td></tr>
+                    <tr><td>Streptococcus fecalis </td><td>1</td><td>1</td><td>0.1</td><td>positive</td></tr>
+                    <tr><td>Streptococcus hemolyticus </td><td>0.001</td><td>14</td><td>10</td><td>positive</td></tr>
+                    <tr><td>Streptococcus viridans</td><td>0.005</td><td>10</td><td>40</td><td>positive</td></tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div id='table-container'></div>
+
+          </div>
+        </section>
+
+
+        <section id="assignment">
+          <div class="container-fluid">
+            <div class="row " style="background-color: none;">
+              <div class="col-xs-12 text-center title" style="">
+                  <hr>
+                  <h1>Assignment</h1>
+                  <hr style="margin-left: 35%; margin-right: 35%">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="font-weight: bold;">SI 649 W 2018 Individual Assignment</div>
+                    <div class="panel-body" style="">
+                      <span style="color: grey;">
+                      Your task is to design a visualization that you believe effectively communicates the data and provide a short write-up (no more than 4 paragraphs) describing your design. While you must use the data set given, note that you are free to transform the data as you see fit. You are also free to incorporate external data as you see fit. Your visualization should be interpretable without recourse to your short write-up. Do not forget to include title, axis labels or legends as needed!
+                      <br><br>
+                      As different visualizations can emphasize different aspects of a data set, you should document what aspects of the data you are attempting to most effectively communicate. In short, what story (or stories) are you trying to tell? Just as important, also note which aspects of the data might be obscured or down-played due to your visualization design.
+                      <br><br>
+                      In your write-up, you should provide a rigorous rationale for your design decisions. Document the visual encodings you used and why they are appropriate for the data. These decisions include the choice of visualization type, size, color, scale, and other visual elements, as well as the use of sorting or other data transformations. How do these decisions facilitate effective communication?
+                      </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <a href="#header"><button style="">Back to Top</button></a>
+              </div>
+            </div>
+          </div>     
+        </section>
+
+	</body>
+
+</html>
